@@ -1,0 +1,43 @@
+$color1: #334455;
+$color2: #666;
+
+@mixin column($backgroundColor: $color1, $color: $color2, $width: 50%) {
+  width: $width;
+  background: $backgroundColor;
+  color: $color;
+}
+
+.fooBar {
+  font-size: 16px;
+  padding: 32px;
+  border: red solid 1px;
+
+  &.big {
+    font-size: 32px;
+    padding: 64px;
+  }
+}
+
+.hello-world {
+  .col1 {
+    @include column($color1, $color2);
+    z-index: 37;
+    position: static;
+    @media (max-width: 64em) {
+      background-color: #999999;
+      width: 75%;
+    }
+  }
+  .col2 {
+    @include column($color1, $color2);
+    @media (max-width: 64em) {
+      width: 25%;
+    }
+  }
+}
+.lorem-ipsum {
+  padding: 0px 2em 0px 2em;
+}
+.lorem-dolor::before {
+  color: lighten($color2, 20%);
+}

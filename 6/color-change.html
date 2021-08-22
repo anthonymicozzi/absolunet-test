@@ -1,0 +1,39 @@
+<div id="Lorem">
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <aside data-colour="red">
+    <h1>Rouge</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+  </aside>
+  <section data-colour="green">
+    <h1>Vert</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+  </section>
+  <aside data-colour="blue">
+    <h2>Bleu</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+  </aside>
+</div>
+
+<script>
+  const redAside = document.querySelector('aside[data-colour="red"');
+  const greenSection = document.querySelector('section[data-colour="green"');
+  const blueAside = document.querySelector('aside[data-colour="blue"');
+
+  redAside.addEventListener("click", (event) => {
+    redAside.querySelector("p").style.color = "red";
+    greenSection.querySelector("p").style.color = "initial";
+    blueAside.querySelector("p").style.color = "initial";
+  });
+
+  greenSection.addEventListener("click", (event) => {
+    redAside.querySelector("p").style.color = "initial";
+    greenSection.querySelector("p").style.color = "green";
+    blueAside.querySelector("p").style.color = "initial";
+  });
+
+  blueAside.addEventListener("click", (event) => {
+    redAside.querySelector("p").style.color = "initial";
+    greenSection.querySelector("p").style.color = "initial";
+    blueAside.querySelector("p").style.color = "blue";
+  });
+</script>

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+body {
+  font-family: "Ludo", "Roboto", sans-serif;
+}
+
+div {
+  background-image: url("./code.webp");
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  background-position: right center;
+  width: 65%;
+}
+@media (min-width: 768px) {
+  div {
+    width: 40%;
+  }
+}
+
+h1 {
+  display: block;
+  color: #808080;
+  background-image: url("./star-min.png");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 3.5rem;
+  text-transform: uppercase;
+}
+h1::first-letter {
+  color: #0b24fb;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
+  position: relative;
+  z-index: -10;
+  background-color: #f7f7f7;
+  list-style: none;
+  padding: 0.5rem 1.5rem;
+  margin: 0 2rem;
+}
+ul :nth-child(4) {
+  color: #53c579;
+}
+ul li::before {
+  content: "-";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul li:nth-child(-n+4)::before {
+  content: "•";
+  color: #fc0d1b;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul li:nth-child(2)::before {
+  color: #f8d0d2;
+}
+
+/*# sourceMappingURL=styles.css.map */
